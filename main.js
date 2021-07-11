@@ -21,7 +21,7 @@ for (const link of links) {
 const header = document.querySelector('#header')
 const navHeight = header.offsetHeight
 
-window.addEventListener('scroll', function () {
+function changeHeaderWhenScroll() {
   if (window.scrollY >= navHeight) {
     /* --- Scroll is bigger than header's height --- */
     header.classList.add('scroll')
@@ -29,7 +29,7 @@ window.addEventListener('scroll', function () {
     /* --- Scroll is smaller than header's height --- */
     header.classList.remove('scroll')
   }
-})
+}
 
 /* --- Testimonials carousel slider Swiper --- */
 const swiper = new Swiper('.swiper-container', {
@@ -55,6 +55,25 @@ scrollReveal.reveal(
   #services header, #services .card,
   #testimonials header, #testimonials .testimonials,
   #contact .text, #contact .links
+  footer .brand, footer .ongs
   `,
   { interval: 100 }
 )
+
+/* --- Back to top button --- */
+
+function backToTop() {
+  const backToTopButton = document.querySelector('.back-to-top')
+
+  if (window.scrollY >= 560) {
+    backToTopButton.classList.add('show')
+  } else {
+    backToTopButton.classList.remove('show')
+  }
+}
+
+/* --- When scroll --- */
+window.addEventListener('scroll', function () {
+  changeHeaderWhenScroll()
+  backToTop()
+})
