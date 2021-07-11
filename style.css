@@ -11,6 +11,7 @@ ul {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 img {
@@ -279,6 +280,7 @@ nav.show div.icon-close {
 #home .image img {
   position: relative;
   right: 2.93rem;
+  left: 1rem;
 }
 
 #home .image img,
@@ -321,8 +323,8 @@ nav.show div.icon-close {
   width: 80%;
   background: var(--base-color-second);
   position: absolute;
-  top: -8.3%;
-  left: -33%;
+  top: -16.8%;
+  left: 16.7%;
   z-index: 0;
 }
 
@@ -525,6 +527,7 @@ footer .ongs a:hover {
 /* --- Larger devices: +1200 --- */
 
 @media (min-width: 1200px) {
+  /* -Reusable classes- */
   .container {
     max-width: 1120px;
     margin-left: auto;
@@ -533,6 +536,10 @@ footer .ongs a:hover {
 
   .section {
     padding: 10rem 0;
+  }
+
+  .button {
+    height: 3.125rem;
   }
 
   nav .menu {
@@ -557,6 +564,10 @@ footer .ongs a:hover {
   main {
     margin-top: var(--header-height);
   }
+
+  image {
+    position: relative;
+  }
 }
 
 /* -Home- */
@@ -564,6 +575,7 @@ footer .ongs a:hover {
 #home .container {
   grid-auto-flow: column;
   justify-content: space-between;
+  margin: 0 auto;
 }
 
 #home .image {
@@ -572,6 +584,8 @@ footer .ongs a:hover {
 
 #home .text {
   order: 0;
+  max-width: 24rem;
+  text-align: left;
 }
 
 /* --- Larger devices: +992 --- */
