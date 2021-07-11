@@ -595,3 +595,7 @@ footer .ongs a:hover {
     --subtitle-font-size: 1.125rem;
   }
 }
+
+a {
+  color:inherit;
+}
