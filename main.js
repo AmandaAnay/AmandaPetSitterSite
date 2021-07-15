@@ -80,7 +80,7 @@ function backToTop() {
 /* --- Active menu as per session visible on the page --- */
 const sections = document.querySelectorAll('main section[id]')
 function activateMenuAtCurrentSection() {
-  const chekpoint = window.pageYOffset + (window.innerHeight / 8) * 4
+  const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4
 
   for (const section of sections) {
     const sectionTop = section.offsetTop
